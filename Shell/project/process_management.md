@@ -21,7 +21,7 @@ vibhu     1234  1.2  1.5 274532 15632 ?        Sl   10:15   0:12 /usr/bin/python
 mysql     2001  0.5  2.0 450000 20988 ?        Ssl  Sep25   1:02 /usr/sbin/mysqld
 ```
 
-![alt text](<../../images/Screenshot from 2025-09-27 21-12-46.png>)
+![alt text](<images_project/Screenshot from 2025-09-27 21-12-46.png>)
 ---
 
 ## 🌳 **2. Process Tree: `pstree -p`**
@@ -34,7 +34,7 @@ systemd(1)─┬─NetworkManager(778)
            ├─mysqld(2001)
            └─python3(1234)
 ```
-![alt text](<../../images/Screenshot from 2025-09-27 21-16-29.png>)
+![alt text](<images_project/Screenshot from 2025-09-27 21-16-29.png>)
 ---
 
 ## 📊 **3. Real-Time Monitoring: `top`**
@@ -71,7 +71,7 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   4638.2 avail Mem
 👉 Press `q` to quit.
 
 
-![alt text](<../../images/Screenshot from 2025-09-27 22-07-33.png>)
+![alt text](<images_project/Screenshot from 2025-09-27 22-07-33.png>)
 ---
 
 ## ⚡ **4. Adjust Process Priority- nice and renice **
@@ -86,7 +86,7 @@ nice -n 10 sleep 300 &
 renice -n -5 -p 3050
 3050 (process ID) old priority 10, new priority -5
 ```
-![alt text](<../../images/Screenshot from 2025-09-27 22-20-56.png>)
+![alt text](<images_project/Screenshot from 2025-09-27 22-20-56.png>)
 ---
 
 ## 🔧 **5. CPU Affinity: `taskset`**
@@ -100,7 +100,7 @@ pid 3050's current affinity list: 0-3
 taskset -cp 1 3050
 pid 3050's current affinity list: 1
 ```
-![alt text](<../../images/Screenshot from 2025-09-27 22-24-30.png>)
+![alt text](<images_project/Screenshot from 2025-09-27 22-24-30.png>)
 ---
 
 ## 📂 **6. I/O Scheduling Priority: `ionice`**
@@ -123,7 +123,7 @@ lsof -p 4139 | head -5
 
 -  Shows all files and resources that a process has opened (including network sockets, directories, regular files).
 
-![alt text](<../../images/Screenshot from 2025-09-27 22-37-18.png>)
+![alt text](<images_project/Screenshot from 2025-09-27 22-37-18.png>)
 ---
 
 #### 8. 🐛 Trace System Calls of a Process
@@ -160,7 +160,7 @@ pidstat -p 4139 2 3
 
 - Reports stats every 2 seconds, 3 times, for process 4139.
 
-![alt text](<../../images/Screenshot from 2025-09-27 22-51-55.png>)
+![alt text](<images_project/Screenshot from 2025-09-27 22-51-55.png>)
 ---
 
  #### 11. 🔐 Control Groups (cgroups) for Resource Limits
@@ -175,7 +175,7 @@ pidstat -p 4139 2 3
 sudo cgcreate -g cpu,memory:/testgroup
 ```
 
- ![alt text](<../../images/Screenshot from 2025-09-27 22-56-40.png>) 
+![alt text](<images_project/Screenshot from 2025-09-27 22-56-40.png>)
 
  2. Limit CPU and Memory:
 
@@ -187,7 +187,7 @@ sudo cgcreate -g cpu,memory:/testgroup
 mount | grep cgroup
 ```
 
- ![alt text](<../../images/Screenshot from 2025-09-27 23-00-56.png>) 
+![alt text](<images_project/Screenshot from 2025-09-27 23-00-56.png>)
 - My system is running on cgroup v2
 
 ```bash
