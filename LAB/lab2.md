@@ -31,4 +31,4 @@ rm -r folder_name    # Delete folder (recursively)
 ```
 ## ⚠️ Be careful! There is no undo.
 
-![alt text](<../images/Screenshot from 2025-09-08 16-30-4] 
+![alt text](<../images/Screenshot from 2025-09-08 16-30-49.png>) 
