@@ -22,7 +22,6 @@ mysql     2001  0.5  2.0 450000 20988 ?        Ssl  Sep25   1:02 /usr/sbin/mysql
 ```
 
 ![alt text](<../../images/Screenshot from 2025-09-27 21-12-46.png>)
-
 ---
 
 ## 🌳 **2. Process Tree: `pstree -p`**
@@ -125,6 +124,7 @@ lsof -p 4139 | head -5
 -  Shows all files and resources that a process has opened (including network sockets, directories, regular files).
 
 ![alt text](<../../images/Screenshot from 2025-09-27 22-37-18.png>)
+---
 
 #### 8. 🐛 Trace System Calls of a Process
 
@@ -161,6 +161,7 @@ pidstat -p 4139 2 3
 - Reports stats every 2 seconds, 3 times, for process 4139.
 
 ![alt text](<../../images/Screenshot from 2025-09-27 22-51-55.png>)
+---
 
  #### 11. 🔐 Control Groups (cgroups) for Resource Limits
 
