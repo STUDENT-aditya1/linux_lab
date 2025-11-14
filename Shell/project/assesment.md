@@ -105,7 +105,7 @@ done
 echo "Array C (indices of palindromes): ${C[@]}"
 echo "Array D (products): ${D[@]}"
 ```
-![alt text](<images_project/Screenshot from 2025-11-14 11-07-42.png>)
+![alt text](<images_project/Screenshot from 2025-11-14 11-12-58.png>)
 
 ![alt text](<images_project/Screenshot from 2025-11-14 11-09-19.png>)
 
